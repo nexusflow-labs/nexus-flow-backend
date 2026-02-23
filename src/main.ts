@@ -7,7 +7,6 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Kích hoạt Validation toàn cục
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

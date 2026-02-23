@@ -13,7 +13,6 @@ import { GetWorkspaceUseCase } from './domains/use-cases/get-workspace.use-case'
       provide: IWorkspaceRepository,
       useClass: InMemoryWorkspaceRepository,
     },
-    // use‑case factories so Nest can inject the repository
     {
       provide: CreateWorkspaceUseCase,
       inject: [IWorkspaceRepository],
